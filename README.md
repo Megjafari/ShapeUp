@@ -4,7 +4,7 @@ Welcome to the Ultimate BMI App! This is a simple console application that allow
 
 ## Features
 
-- Calculates BMI from weight (kg) and height (cm)
+- Calculates BMI from weight (kg) and height (m)
 - Classifies BMI into categories: Underweight, Normal, Overweight, Obesity
 - Gives simple training plan and nutrition advice
 - Colored output in console:
