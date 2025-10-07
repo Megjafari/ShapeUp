@@ -52,4 +52,4 @@ a full workout tracker, nutrition assistant, and social fitness app.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/ShapeUp.git
+   git clone https://github.com/megjafari/ShapeUp.git
