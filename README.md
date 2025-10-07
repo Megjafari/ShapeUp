@@ -1,38 +1,55 @@
-# ShapeUp
+# 💪 ShapeUp
 
-Welcome to the ShapeUp! This is a simple console application that calculates your Body Mass Index (BMI) and gives personalized training and nutrition advice.
-
----
-
-## Features
-
-- Calculates BMI from weight (kg) and height (cm)
-- Classifies BMI into categories: Underweight, Normal, Overweight, Obesity
-- Provides training plan and nutrition advice
-- Colored console output: Green for Normal, Red for Underweight or Overweight/Obesity
-- Allows multiple calculations without restarting the app
+ShapeUp is a fitness passion project that starts simple and grows step by step.  
+The first version is a **BMI calculator with training plan suggestions**, but the vision is much bigger:  
+a full workout tracker, nutrition assistant, and social fitness app.
 
 ---
 
-## How to Run the App
+## ✨ Features (current)
+- Calculate BMI
+- Categorize BMI (underweight, normal, overweight, obese)
+- Suggest basic training plans
 
-### Option 1: Using the Executable (.exe)
+---
 
-1. Go to the **Tag** section of this repository:
-2. Download the latest `ShapeUp.exe` file from **Assets**.
-3. If Windows shows a security warning, do the following:
-   - Right-click the file → **Properties**
-   - Check **Unblock** at the bottom (if available)
-   - Click **Apply** and **OK**
-4. Double-click the `ShapeUp.exe` file to run the app.
-5. Follow the on-screen instructions:
-   - Enter your weight in kg
-   - Enter your height in cm
-   - View your BMI, category, training plan, and nutrition advice
-6. When prompted, type `y` if you want to calculate again or `n` to exit.
+## 🚀 Roadmap
 
-### Option 2: Using .NET SDK
+### ✅ Phase 1 (MVP – in progress)
+- [x] Calculate BMI
+- [x] Categorize BMI
+- [ ] Add nutrition advice (calories, macros, protein tips)
 
-1. Clone this repository:
+### 🔜 Phase 2 (User system)
+- [ ] Create login/register
+- [ ] Save user data (BMI history, workouts)
+- [ ] Track progress over time
 
-  
+### 🔜 Phase 3 (Workout features)
+- [ ] Exercises for each muscle group
+- [ ] Custom workout splits or pre-made programs
+- [ ] Log sets, reps, and weights
+- [ ] Support progressive overload tracking
+
+### 🔜 Phase 4 (Social features)
+- [ ] Add friends
+- [ ] Share progress
+- [ ] Workout feed (like Instagram: posts, likes, comments)
+
+### 🔜 Phase 5 (Advanced health tracking)
+- [ ] Step counting
+- [ ] Sleep tracking
+- [ ] Recovery-based training recommendations
+- [ ] Notifications with daily tips
+
+### 💡 Future ideas
+- [ ] Mini-games during rest time between sets
+- [ ] For You Page with suggested workouts
+
+---
+
+## 🛠 Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/ShapeUp.git
