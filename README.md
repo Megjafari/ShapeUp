@@ -1,4 +1,4 @@
-# 💪 ShapeUp   ![Build](https://github.com/MegJafari/ShapeUp/actions/workflows/build-and-release.yml/badge.svg)
+# 💪 ShapeUp   ![Build](https://github.com/megjafari/ShapeUp/actions/workflows/githubaction.yml/badge.svg)
 
 
 
