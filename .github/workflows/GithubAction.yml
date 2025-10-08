@@ -1,4 +1,4 @@
-name: Build & Release ShapeUp
+name: ShapeUp
 
 on:
   pull_request:
