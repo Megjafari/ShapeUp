@@ -10,15 +10,16 @@ a full workout tracker, nutrition assistant, and social fitness app.
 - Calculate BMI
 - Categorize BMI (underweight, normal, overweight, obese)
 - Suggest basic training plans
+- Nutrition advice (calories, macros, protein tips)
 
 ---
 
 ## 🚀 Roadmap
 
-### ✅ Phase 1 (MVP – in progress)
+### ✅ Phase 1 (MVP – Complete)
 - [x] Calculate BMI
 - [x] Categorize BMI
-- [ ] Add nutrition advice (calories, macros, protein tips)
+- [x] Add nutrition advice (calories, macros, protein tips)
 
 ### 🔜 Phase 2 (User system)
 - [ ] Create login/register
@@ -53,3 +54,6 @@ a full workout tracker, nutrition assistant, and social fitness app.
 1. Clone the repository:
    ```bash
    git clone https://github.com/megjafari/ShapeUp.git
+
+![Build](https://github.com/your-username/ShapeUp/actions/workflows/dotnet-build.yml/badge.svg)
+
