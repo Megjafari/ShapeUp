@@ -1,4 +1,4 @@
-# 💪 ShapeUp
+# 💪 ShapeUp   (https://github.com/your-username/ShapeUp/actions/workflows/dotnet-build.yml/badge.svg)
 
 ShapeUp is a fitness passion project that starts simple and grows step by step.  
 The first version is a **BMI calculator with training plan suggestions**, but the vision is much bigger:  
@@ -49,11 +49,13 @@ a full workout tracker, nutrition assistant, and social fitness app.
 
 ---
 
-## 🛠 Installation
+📄 Changelog (v1.1)
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/megjafari/ShapeUp.git
+Phase 1 complete: BMI calculation, category, basic training plan
 
-![Build](https://github.com/your-username/ShapeUp/actions/workflows/dotnet-build.yml/badge.svg)
+Improved user input handling
+
+Minor bug fixes
+
+---
 
