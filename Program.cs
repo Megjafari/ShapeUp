@@ -12,26 +12,41 @@ namespace ShapeUp
 
         static void Main(string[] args)
         {
-            
 
-            ConsoleHelper.PrintWelcome();
+            UserService userService = new UserService();
 
-            // Get user input
-            var request = ConsoleHelper.GetUserInput();
+            // Starta user interface (register/login)
+            UserInterface ui = new UserInterface(userService);
 
-            // Calculate BMI
-            double bmi = BmiCalculator.CalculateBmi(request.Height, request.Weight);
-            string category = BmiCalculator.GetBmiCategory(bmi);
-            string trainingPlan = BmiCalculator.GetTrainingPlan(category);
+            User currentUser = ui.Start(); // Nu får vi tillbaka inloggad användare
+            if (currentUser != null)
+            {
 
-            // Calculate Nutrition
-            var nutrition = NutritionCalculator.GetNutritionAdvice(
-                request.Weight, request.Height, request.Age, request.Gender,
-                request.ActivityLevel, request.FitnessGoal
-            );
 
-            // Display results
-            ConsoleHelper.PrintResults(bmi, category, trainingPlan, nutrition);
+                Console.WriteLine($"Welcome back, {currentUser.Nickname}!");
+
+
+                // Get user input
+                var request = ConsoleHelper.GetUserInput();
+
+                // Calculate BMI
+                double bmi = BmiCalculator.CalculateBmi(request.Height, request.Weight);
+                string category = BmiCalculator.GetBmiCategory(bmi);
+                string trainingPlan = BmiCalculator.GetTrainingPlan(category);
+
+                // Spara BMI i användarhistorik
+                currentUser.BMIHistory.Add(bmi);
+                userService.UpdateUser(currentUser); // Lägg till en metod i UserService
+
+                // Calculate Nutrition
+                var nutrition = NutritionCalculator.GetNutritionAdvice(
+                    request.Weight, request.Height, request.Age, request.Gender,
+                    request.ActivityLevel, request.FitnessGoal
+                );
+
+                // Display results
+                ConsoleHelper.PrintResults(bmi, category, trainingPlan, nutrition);
+            }
         }
     }
 }
