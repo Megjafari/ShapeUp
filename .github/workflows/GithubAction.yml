@@ -1,4 +1,4 @@
-name: ShapeUp
+name: GithubAction
 
 on:
   pull_request:
