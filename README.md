@@ -24,7 +24,7 @@ a full workout tracker, nutrition assistant, and social fitness app.
 - [x] Add nutrition advice (calories, macros, protein tips)
 
 ### 🔜 Phase 2 (User system)
-- [ ] Create login/register
+- [x] Create login/register
 - [ ] Save user data (BMI history, workouts)
 - [ ] Track progress over time
 
