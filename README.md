@@ -1,4 +1,4 @@
-# 💪 ShapeUp   ![Build](https://github.com/your-username/ShapeUp/.github/workflows/GithubAction.yml/badge.svg)
+# 💪 ShapeUp   ![Build](https://github.com/MegJafari/ShapeUp/.github/workflows/GithubAction.yml/badge.svg)
 
 
 ShapeUp is a fitness passion project that starts simple and grows step by step.  
