@@ -1,9 +1,10 @@
-name: Build ShapeUp EXE
+name: Build ShapeUp
 
 on:
   push:
     branches: [ main ]
-  workflow_dispatch: # allows manual trigger
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
@@ -21,12 +22,14 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
 
-    - name: Build and Publish EXE
-      run: |
-        dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true /p:PublishTrimmed=true -o ./publish
+    - name: Build Solution (Release)
+      run: dotnet build ShapeUp.sln --configuration Release --no-restore
 
-    - name: Upload EXE as artifact
-      uses: actions/upload-artifact@v4
+    - name: Publish exe
+      run: dotnet publish ShapeUp.sln --configuration Release --output ./publish --self-contained true --runtime win-x64
+
+    - name: Upload exe as artifact
+      uses: actions/upload-artifact@v3
       with:
-        name: ShapeUp-Exe
-        path: ./publish/ShapeUp.exe
+        name: ShapeUp-exe
+        path: ./publish/
