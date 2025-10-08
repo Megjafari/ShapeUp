@@ -1,9 +1,9 @@
-name: Build ShapeUp
+name: Build & Release ShapeUp
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
+    branches: [ main ]
+  push:
     branches: [ main ]
 
 jobs:
@@ -33,3 +33,35 @@ jobs:
       with:
         name: ShapeUp-exe
         path: ./publish/
+
+  release:
+    needs: build
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Download exe artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: ShapeUp-exe
+        path: ./release
+
+    - name: Create GitHub Release
+      id: create_release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: "v${{ github.run_number }}"
+        name: "ShapeUp v${{ github.run_number }}"
+        body: "Automated release for merge to main (build #${{ github.run_number }})"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Upload exe to Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: ./release/*
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
